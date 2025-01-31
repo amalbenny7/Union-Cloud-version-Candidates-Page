@@ -1,0 +1,109 @@
+:root {
+    --beige: #FFD9B3;
+    --green: #68A900;
+    --hover-green: #457700;
+}
+
+/* Accordion Heading Styles */
+.accordion h3 {
+    font-size: 1.4rem !important;
+    margin: 0 !important;
+    padding: 15px 0 !important;
+    font-weight: bold !important;
+    color: #fff !important;
+}
+
+/* Accordion Container */
+.accordion {
+    cursor: pointer !important;
+    padding: 12px !important;
+    margin: 0 0 10px 0 !important;
+    width: 100% !important;
+    border: none !important;
+    text-align: left !important;
+    outline: none !important;
+    transition: 0.4s ease-in-out !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: var(--beige) !important;
+}
+
+/* Beige Accordion Heading */
+.accordion.beige h3 {
+    color: #000 !important;
+}
+
+/* Accordion Symbol */
+.accordion:before {
+    content: "\002B" !important; /* Plus symbol */
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    float: left !important;
+    margin: 0 15px 0 15px !important;
+}
+
+/* Active Accordion Symbol */
+.accordion.active:before {
+    content: "\2212" !important; /* Minus symbol */
+}
+
+/* Panel Styling */
+.panel {
+    max-height: 0 ;
+    overflow: hidden !important;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease !important;
+    padding: 0 20px !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 10px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.accordion.active + .panel {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 500px;
+}
+
+/* Candidate Card */
+.candidate-card {
+    background: #FFFFFF !important;
+    border: 2px solid #C8ED8E !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-bottom: 20px !important;
+}
+
+/* Candidate Image */
+.candidate-card img {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
+    margin-right: 20px !important;
+    object-fit: cover !important;
+}
+
+/* Candidate Info */
+.candidate-card .info {
+    flex: 1 !important;
+    background: #FFFFFF !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+}
+
+/* Social Links */
+.candidate-card .social-links a {
+    margin-right: 10px !important;
+    color: #2ECC71 !important;
+    font-size: 1.2em !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.candidate-card .social-links a:hover {
+    color: var(--hover-green) !important;
+}
